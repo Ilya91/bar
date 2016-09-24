@@ -1,0 +1,170 @@
+.index-main{
+    background: #000 url(../img/bg-body.jpg) 0 0 no-repeat;
+    padding-top: 60px;
+    padding-bottom: 65px;
+}
+
+.main-header{
+    background-color: #000000;
+}
+
+.container{
+    width:940px;
+    padding: 0 10px;
+    margin:0 auto;
+}
+
+.main-navigation{
+    float: left;
+    width: 780px;
+}
+
+.main-navigation ul li{
+    float: left;
+}
+
+.user-block{
+    float: right;
+    width: 140px;
+    text-align: right;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.index-logo{
+    width: 368px;
+    height: 204px;
+    margin: 0 auto 25px;
+}
+
+.features{
+    margin-bottom: 80px;
+}
+.features-item{
+    float: left;
+    width: 300px;
+    text-align: center;
+    margin-right: 20px;
+    color: white;
+}
+.features-item:last-child{
+    margin-right: 0px;
+}
+
+.index-content{
+    background: #fff;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+}
+
+.index-content-left{
+    float: left;
+    width: 380px;
+}
+
+.index-content-right{
+    float: right;
+    width: 300px;
+}
+
+.main-footer{
+    color: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #262626;
+}
+
+.footer-contacts{
+    float: left;
+    width: 320px;
+    margin-right: 80px;
+}
+
+.footer-social{
+    float: left;
+    width: 140px;
+}
+
+.footer-copyright{
+    float: right;
+    width: 140px;
+}
+
+/*внутренняя страница shop.html*/
+.catalog-main{
+    padding-bottom: 65px;
+}
+.breadcrumbs{
+    margin-bottom: 55px;
+}
+
+.main-content aside{
+    float: left;
+    width: 220px;
+}
+
+.catalog-products{
+    float: right;
+    width: 700px;
+}
+.catalog{
+    margin-bottom: 25px;
+}
+
+.catalog-item{
+    float: left;
+    width: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.catalog-item:nth-child(3n){
+    margin-right: 0;
+}
+.pagination{
+    clear: both;
+}
+
+.pagination li{
+    float: left;
+}
+
+/*внутренняя страница item.html*/
+.shop-item{
+    padding-bottom: 65px;
+}
+.photos-item{
+    width: 460px;
+    float: left;
+}
+.info-item{
+    float: right;
+    width: 390px;
+}
+.main-photo{
+    margin-bottom:20px;
+}
+.thumb-photo{
+    margin-right: 20px;
+    display:block;
+    float:left
+}
+.thumb-photo:last-child{
+    margin-right: 0;
+}
+.info-details{
+    margin-bottom: 40px;
+}
+.info-description{
+    margin-bottom: 40px;
+}
+.price p{
+    display: inline;
+}
+.price{
+    margin-bottom: 65px;
+}
