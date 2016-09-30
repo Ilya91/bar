@@ -23,7 +23,7 @@ body{
 
 .main-navigation{
     float: left;
-    width: 780px;
+    width: 600px;
 }
 .main-navigation ul{
     margin:0;
@@ -42,6 +42,10 @@ body{
     text-decoration: none;
     padding: 25px 17px;
     display: block;
+}
+.main-navigation ul li a.active{
+    border-bottom: 4px solid #fff;
+    padding: 25px 17px 21px;
 }
 .main-navigation ul li a:hover{
     background-color: #242424;
@@ -356,18 +360,121 @@ body{
     transition: all 1s;
 }
 /*внутренняя страница shop.html*/
+.logo-inner{
+    float: left;
+    width: 150px;
+    text-align: center;
+    margin-top: 23px;
+}
 .catalog-main{
+    padding-top:1px;
     padding-bottom: 65px;
+    background: #fff url("../img/content-background.jpg") repeat;
+}
+.catalog-main h1{
+    margin-top:45px;
+    margin-bottom:20px;
 }
 .breadcrumbs{
+    list-style: none;
+    padding-left:0;
     margin-bottom: 55px;
+    font-size:14px;
+    font-weight: 700;
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+    text-transform: uppercase;
 }
+.breadcrumbs li{
+    display: inline-block;
+    padding-right:35px;
+    position: relative;
+}
+.breadcrumbs li::after{
+    content: "";
+    position: absolute;
+    right:14px;
+    top:5px;
+    width: 7px;
+    height: 7px;
 
+    background-color: #000;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.breadcrumbs li:last-child::after{
+    width: 0px;
+    height: 0px;
+}
+.breadcrumbs li span{
+    color: #aba9a7;
+}
+.breadcrumbs li a{
+    color: #000;
+    text-decoration: none;
+}
+.breadcrumbs li a:hover{
+    text-decoration: underline;
+}
 .main-content aside{
     float: left;
     width: 220px;
 }
+.main-content aside fieldset{
+    border: none;
+    margin:0;
+    padding:0;
+    margin-bottom:50px;
+}
+.main-content aside fieldset legend{
+    font-size:24px;
+    line-height:1;
+    margin-bottom:30px;
+}
+.main-content aside ul{
+    padding-left:0;
+    margin:0;
+}
+.main-content aside ul li{
+    list-style: none;
+    font-size:14px;
+    margin-bottom:17px;
+}
+.main-content aside ul li label{
+    position: relative;
+    padding-left: 40px;
+}
+.main-content aside ul li label:hover{
+    color: #663d15;
+    cursor: pointer;
+}
+input[type="checkbox"] + label::before{
+    content: "";
+    width: 20px;
+    height: 20px;
 
+    position: absolute;
+    background: url("../img/sprites.png") 0 -70px no-repeat;
+    left:0;
+
+}
+
+input[type="checkbox"]:checked + label::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    background: url("../img/sprites.png") 0 0 no-repeat,
+    url("../img/sprites.png") 0 -70px no-repeat;
+}
+
+.main-content aside ul li input[type="checkbox"],
+.main-content aside ul li input[type="radio"] {
+    display: none;
+}
 .catalog-products{
     float: right;
     width: 700px;
