@@ -2,6 +2,7 @@ body{
     min-width: 960px;
     font-weight: 700;
     font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+    text-transform: uppercase;
 }
 .index-main{
     background: #000 url(../img/bg-body.jpg) center top no-repeat;
@@ -59,6 +60,7 @@ body{
     text-decoration: none;
     vertical-align: top;
     font-size:16px;
+    line-height:20px;
 }
 .login::before{
     content: "";
@@ -146,7 +148,10 @@ body{
 }
 .index-content p{
     margin:0;
-    margin-bottom: 25px;
+    font-size:14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin-bottom:25px;
 }
 .index-content-left{
     float: left;
@@ -166,13 +171,10 @@ body{
     padding-right: 40px;
 }
 .news-preview li{
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 .news-preview p{
-    font-size:14px;
-    text-transform: uppercase;
     margin-bottom: 0;
-    line-height: 24px;
 }
 .news-preview time{
     font-size:14px;
@@ -195,17 +197,103 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
+    margin-right:16px;
 }
-.btn:hover{
+.btn:hover,
+.btn:active{
     background-color: #663d15;
+}
+.btn.disabled,
+ .btn:disabled{
+     cursor: default;
+     opacity:0.5;
+ }
+.btn.disabled:hover,
+.btn:disabled:hover{
+    background-color: #000;
+}
+.index-gallery{
+    width: 300px;
+    height:258px;
+    position: relative;
+}
+.gallery-prev{
+    position: absolute;
+    bottom:0;
+    left:0;
+    padding-left:50px;
+    padding-right:50px;
+}
+.gallery-next{
+    position: absolute;
+    bottom:0;
+    right:0;
+    margin:0;
+    padding-left:50px;
+    padding-right:50px;
+}
+.gallery-content{
+    margin:0;
+    width: 300px;
+}
+.gallery-content img{
+    display: block;
+    width: 286px;
+    border: 7px solid #fff;
+}
+.index-contacts p{
+    margin-bottom:35px;
+}
+.index-form{
+    width: 300px;
+    height: 252px;
+}
+.send-data-index{
+    width: 100%;
+    margin-right: 0;
+    clear: both;
+    margin-top:15px;
+}
+.appointment-form input {
+    border: 2px solid #000;
+    padding: 10px 0 10px 15px;
+    width: 121px;
+    float: left;
+    margin: 0 20px 20px 0;
+    background-color: #f9f6f3;
+    outline: none;
+
+    font-weight: 700;
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    font-size:14px;
+}
+.appointment-form input:focus{
+    border: 2px solid #663d15;
+}
+.appointment-form input:nth-child(2n){
+    margin-right:0;
+    float: right;
 }
 .main-footer{
     color: #ffffff;
     padding-top: 60px;
     padding-bottom: 40px;
-    background-color: #262626;
+    background: #262626 url("../img/footer-background.jpg");
 }
-
+.main-footer a, .main-footer p{
+    color: #ffffff;
+    font-size:14px;
+    font-weight: 700;
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+.main-footer p{
+    margin:0;
+    margin-bottom:15px;
+}
 .footer-contacts{
     float: left;
     width: 320px;
@@ -214,14 +302,59 @@ body{
 
 .footer-social{
     float: left;
-    width: 140px;
+    width: 150px;
+    text-align: center;
 }
-
+.footer-social a:last-child{
+    margin-right:0;
+}
+.social-btn{
+    background: #000 url("../img/sprites.png") no-repeat;
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin:0;
+    padding:0;
+    margin-right:8px;
+    vertical-align: top;
+}
+.social-btn:hover{
+    background-color: #fff;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.social-btn-vk{
+     background-position: 8px -824px;
+ }
+.social-btn-fb{
+    background-position: 15px -547px;
+}
+.social-btn-inst{
+    background-position: 11px -690px;
+}
+.social-btn-vk:hover{
+    background-position: 8px -758px;
+}
+.social-btn-fb:hover{
+    background-position: 15px -474px;
+}
+.social-btn-inst:hover{
+    background-position: 11px -619px;
+}
 .footer-copyright{
     float: right;
     width: 140px;
+    text-align: center;
 }
+.footer-copyright a:hover{
+    background-color: white;
+    color: black;
 
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
 /*внутренняя страница shop.html*/
 .catalog-main{
     padding-bottom: 65px;
