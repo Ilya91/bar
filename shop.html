@@ -12,6 +12,12 @@
 <body>
     <header class="main-header">
         <div class="container clearfix">
+            <div class="logo-inner">
+                <a href="index.html">
+                    <img src="img/logo-inner.png" alt="logo">
+                </a>
+            </div>
+
             <nav class="main-navigation">
                 <ul>
                     <li><a href="">Информация</a></li>
@@ -29,11 +35,11 @@
     <main class="catalog-main">
         <div class="container">
         <h1 class="inner-content-title">Средства для ухода</h1>
-        <div class="breadcrumbs">
-            <a href="index.html">Главная</a>
-            <a href="">Магазин</a>
-            <span>Средства для ухода</span>
-        </div>
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="">Магазин</a></li>
+            <li><span>Средства для ухода</span></li>
+        </ul>
         <div class="main-content clearfix">
             <aside>
                 <form action="#" method="post">
@@ -51,12 +57,12 @@
                     <fieldset>
                         <legend>Группы товаров</legend>
                         <ul>
-                            <li><input type="checkbox" id="shaving"><label for="shaving">Бритвенные принадлежности</label></li>
-                            <li><input type="checkbox" id="cream" checked><label for="cream">Средства для ухода</label></li>
-                            <li><input type="checkbox" id="accessories"><label for="accessories">Аксессуары</label></li>
+                            <li><input type="radio" id="shaving" name="group"><label for="shaving">Бритвенные принадлежности</label></li>
+                            <li><input type="radio" id="cream" checked name="group"><label for="cream">Средства для ухода</label></li>
+                            <li><input type="radio" id="accessories" name="group"><label for="accessories">Аксессуары</label></li>
                         </ul>
                     </fieldset>
-                        <button type="submit">Показать</button>
+                        <button class="btn" type="submit">Показать</button>
                     </form>
             </aside>
             <section class="catalog-products">
@@ -159,10 +165,7 @@
                 ТЕЛЕФОН: +7 (495) 666-02-66
             </section>
             <section class="footer-social">
-                <p>Давайте дружить</p>
-                <a href="" class="social-btn social-btn-vk">Вконтакте</a>
-                <a href="" class="social-btn social-btn-fb">Фейсбук</a>
-                <a href="" class="social-btn social-btn-inst">Инстаграмм</a>
+                <p>Давайте дружить</p><a href="" class="social-btn social-btn-vk"></a><a href="" class="social-btn social-btn-fb"></a><a href="" class="social-btn social-btn-inst"></a>
             </section>
             <section class="footer-copyright">
                 <p>Разработано:</p>
