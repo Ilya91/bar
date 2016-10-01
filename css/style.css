@@ -470,7 +470,43 @@ input[type="checkbox"]:checked + label::before{
     background: url("../img/sprites.png") 0 0 no-repeat,
     url("../img/sprites.png") 0 -70px no-repeat;
 }
+input[type="radio"] + label::before{
+    content: "";
+    width: 20px;
+    height: 20px;
 
+    position: absolute;
+    background: url("../img/sprites.png") 0 -415px no-repeat;
+    left:0;
+}
+input[type="checkbox"]:disabled + label::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    background: url("../img/sprites.png") 0 -70px no-repeat;
+    left:0;
+    opacity: 0.5;
+    cursor: default;
+}
+input[type="checkbox"]:disabled + label{
+    color: #ACAAA8;
+    cursor: default;
+}
+input[type="checkbox"]:disabled + label:hover{
+     color: #ACAAA8;
+     cursor: default;
+ }
+input[type="radio"]:checked + label::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    background: url("../img/sprites.png") 0 -345px no-repeat;
+    left:0;
+}
 .main-content aside ul li input[type="checkbox"],
 .main-content aside ul li input[type="radio"] {
     display: none;
