@@ -4,6 +4,13 @@ body{
     font-family: 'PT Sans Narrow', 'Arial', sans-serif;
     text-transform: uppercase;
 }
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+    margin-bottom:35px;
+    margin-top:0;
+}
 .index-main{
     background: #000 url(../img/bg-body.jpg) center top no-repeat;
     padding-top: 60px;
@@ -43,9 +50,23 @@ body{
     padding: 25px 17px;
     display: block;
 }
-.main-navigation ul li a.active{
-    border-bottom: 4px solid #fff;
-    padding: 25px 17px 21px;
+.main-navigation .active{
+    /*border-bottom: 4px solid #fff;
+    padding: 25px 17px 21px;*/
+    position: relative;
+}
+.main-navigation .active a:hover{
+    background: none;
+    cursor: default;
+}
+.main-navigation .active::after{
+    content: "";
+    height: 4px;
+    bottom:0;
+    right:17px;
+    left: 17px;
+    position: absolute;
+    background-color: #fff;
 }
 .main-navigation ul li a:hover{
     background-color: #242424;
@@ -657,26 +678,25 @@ input[type="radio"]:checked + label::before{
 .price-item{
     margin-bottom: 65px;
 }
-.info-item h3{
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
-    margin-bottom:35px;
-}
-.info-item ul{
+.content-list{
     list-style: none;
-    line-height:24px;
     padding:0;
+    margin-bottom:0;
 }
-.info-item ul li{
+.content-list li{
     position: relative;
     padding-left: 20px;
+    margin-bottom:20px;
+    font-size:14px;
 }
-.info-item ul li::after{
+.content-list li:last-child{
+    margin-bottom:0;
+}
+.content-list li::after{
     content: "";
     position: absolute;
     left:0;
-    top:9px;
+    top:6px;
     width: 7px;
     height: 7px;
 
@@ -686,4 +706,214 @@ input[type="radio"]:checked + label::before{
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+/*
+price*/
+.big-heading{
+    margin-bottom:70px;
+    text-align: center;
+}
+.big-heading::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid #000;
+
+    position: relative;
+    top:-25px;
+    z-index:1;
+}
+.big-heading h2{
+    position: relative;
+    margin:0;
+    font-size:48px;
+    text-align: center;
+    display: inline;
+    line-height: 48px;
+    padding:0 25px;
+    z-index:2;
+    background: #fff url("../img/content-background.jpg");
+}
+.price-services{
+    margin-bottom:65px;
+}
+.price-services .left, .price-about-us .left{
+     float: left;
+     width: 380px;
+ }
+.price-services .right, .price-about-us .right{
+    float: right;
+    width: 460px;
+}
+
+.table-of-prices{
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size:14px;
+    font-weight: 700;
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+}
+.table-of-prices, tr{
+    width: 100%;
+    border: 2px solid #000;
+}
+.table-of-prices td{
+    width: 50%;
+    border: 2px solid #000;
+    text-align: center;
+    padding: 10px 0;
+}
+td.name-of-service{
+    text-align: left;
+    padding-left:15px;
+}
+.price-about-us p{
+    margin:0;
+    font-size:14px;
+    line-height:24px;
+    width: 400px;
+}
+
+/*Modal window*/
+.modal-content{
+    width: 300px;
+    margin-left:-230px;
+    padding: 50px 80px;
+    color: #000;
+    background: #fff url("../img/content-background.jpg");
+    -webkit-box-shadow: 0 30px 50px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0 30px 50px rgba(0,0,0,0.7);
+    box-shadow: 0 30px 50px rgba(0,0,0,0.7);
+
+    position: absolute;
+    top:120px;
+    left:50%;
+}
+.modal-content-close{
+    position: absolute;
+    top:0;
+    right:-34px;
+    width: 22px;
+    height:22px;
+
+    font-size:0;
+    background-color: transparent;
+    border:0;
+    outline: 0;
+    cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after{
+    content: "";
+    position: absolute;
+    top:10px;
+    left:2px;
+
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+    border-radius:1px;
+}
+.modal-content-close::before{
+     transform: rotate(45deg);
+}
+.modal-content-close::after{
+    transform: rotate(-45deg);
+}
+.modal-content h2{
+    margin:0;
+    margin-bottom:20px;
+
+    font-size:30px;
+    line-height:42px;
+}
+.modal-content p{
+    margin:0;
+    margin-bottom:14px;
+}
+.modal-content .login-form{
+    margin-top:30px;
+    margin-bottom:10px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"]{
+    font-size:14px;
+    line-height:24px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+
+    width: 236px;
+    margin:0;
+    margin-bottom:10px;
+    padding:10px 20px;
+    padding-right:40px;
+
+    background-color: #F9F6F3;
+    border: 2px solid #000;
+    outline:none;
+}
+.login-form input:focus{
+    border-color: #663d15;
+}
+.login-form input.icon-user{
+    background-image: url("../img/sprites.png");
+    background-repeat:no-repeat;
+    background-position: 100% -891px;
+}
+.login-form input.icon-password{
+    background-image: url("../img/sprites.png");
+    background-repeat:no-repeat;
+    background-position: 100% -264px;
+}
+.login-form .restore{
+    float: right;
+    color: #000;
+}
+.login-form .btn{
+    width: 100%;
+    margin-top:15px;
+}
+.login-checkbox{
+    position: relative;
+    padding-left:30px;
+    cursor: pointer;
+}
+.login-checkbox input[type="checkbox"]{
+    display: none;
+}
+.login-checkbox:hover{
+    color: #663d15;
+}
+.login-checkbox input[type="checkbox"] + .checkbox-indicator{
+     position: absolute;
+     text-outline:-3px;
+     left:0;
+
+     width: 17px;
+     height:17px;
+
+     border: 2px solid #000;
+ }
+.login-checkbox input[type="checkbox"]:checked + 
+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked +
+.checkbox-indicator::after
+{
+    /*background-image: url("../img/sprites.png");
+    background-position: -1px -1px;*/
+    content: "";
+    position: absolute;
+    top:8px;
+    left:1px;
+    
+    width: 15px;
+    height:2px;
+    background-color: #000;
+}
+.checkbox-indicator::before{
+    transform: rotate(45deg);
+}
+.checkbox-indicator::after{
+    transform: rotate(-45deg);
 }
