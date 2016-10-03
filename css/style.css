@@ -781,13 +781,13 @@ td.name-of-service{
     padding: 50px 80px;
     color: #000;
     background: #fff url("../img/content-background.jpg");
-    -webkit-box-shadow: 0 30px 50px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0 30px 50px rgba(0,0,0,0.7);
-    box-shadow: 0 30px 50px rgba(0,0,0,0.7);
 
     position: absolute;
     top:120px;
     left:50%;
+
+    box-shadow: 0 30px 50px rgba(0,0,0,0.7);
+    z-index:20;
 }
 .modal-content-close{
     position: absolute;
@@ -809,10 +809,11 @@ td.name-of-service{
     top:10px;
     left:2px;
 
-    width: 19px;
-    height: 3px;
-    background-color: #d0d0d0;
+    width: 23px;
+    height: 4px;
+    background-color: #D1D1D1;
     border-radius:1px;
+    /*border: 1px solid #000;*/
 }
 .modal-content-close::before{
      transform: rotate(45deg);
@@ -916,4 +917,31 @@ td.name-of-service{
 }
 .checkbox-indicator::after{
     transform: rotate(-45deg);
+}
+
+.modal-content-map{
+    width: 766px;
+    height:561px;
+    background: #e9e5dc url("../img/map.jpg");
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-top:-280px;
+    margin-left: -383px;
+    border: 7px solid #fff;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+    z-index:20;
+}
+
+.modal-overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:10;
+    
+    width: 100%;
+    height:100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
