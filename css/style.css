@@ -934,7 +934,7 @@ td.name-of-service{
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 
     z-index:20;
-    display: none;
+    display: block;
 }
 
 .modal-overlay{
@@ -958,4 +958,17 @@ td.name-of-service{
 .modal-content-show{
     display: block;
     animation: bounce 0.6s;
+}
+
+.overlay-content-show{
+    display: block;
+}
+
+@keyframes mistake {
+    0%, 100% { transform: translateY(0);}
+    10%, 30%, 50%, 70%, 90% { transform: translateY(-10px);}
+    20%, 40%, 60%, 80% { transform: translateY(10px);}
+}
+.modal-error{
+    animation: mistake 0.6s;
 }
