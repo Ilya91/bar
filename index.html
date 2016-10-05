@@ -23,7 +23,7 @@
                 </ul>
             </nav>
             <div class="user-block">
-                <a href="" class="login">Вход</a>
+                <a href="#" class="login">Вход</a>
             </div>
         </div>
     </header>
@@ -138,7 +138,7 @@
     <h2 class="modal-content-title">Личный кабинет</h2>
     <p>Введите свой логин и пароль</p>
     <form action="https://mysite" class="login-form" method="post">
-        <input type="text" class="icon-user" name="login" placeholder="Логин">
+        <input type="text" class="icon-user" name="login" placeholder="Логин" >
         <input type="password" class="icon-password" name="password" placeholder="Пароль">
         <label class="login-checkbox">
             <input type="checkbox" name="remember">
@@ -149,5 +149,61 @@
         <button class="btn" type="submit">Войти</button>
     </form>
 </div>
+<div class="modal-content-map">
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    <div id="yandex-map"></div>
+</div>
+<div class="modal-overlay"></div>
+    <script>
+        var link = document.querySelector(".login");
+        var modalLogin = document.querySelector(".modal-content");
+        var close = document.querySelector(".modal-content-close");
+        var overlay = document.querySelector(".modal-overlay");
+        var login = modalLogin.querySelector("[name=login]");
+        var password = modalLogin.querySelector("[name=password]");
+        var form = modalLogin.querySelector("form");
+        var storage = localStorage.getItem("login");
+
+
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            modalLogin.classList.add("modal-content-show");
+            overlay.classList.add("modal-content-show");
+
+            if(storage){
+                login.value = storage;
+                password.focus();
+            }else{
+                login.focus();
+            }
+        });
+        close.addEventListener("click", function (e) {
+            e.preventDefault();
+            modalLogin.classList.remove("modal-content-show");
+            overlay.classList.remove("modal-content-show");
+        });
+        overlay.addEventListener("click", function () {
+            modalLogin.classList.remove("modal-content-show");
+            overlay.classList.remove("modal-content-show");
+        });
+        form.addEventListener("submit", function (e) {
+
+            if (!login.value || !password.value){
+                e.preventDefault();
+                console.log("Заполните поля формы!");
+            }else {
+                localStorage.setItem("login", login.value);
+            }
+        });
+
+        window.addEventListener("keydown", function (e) {
+            if (e.keyCode === 27){
+                modalLogin.classList.remove("modal-content-show");
+                overlay.classList.remove("modal-content-show");
+            }
+        });
+
+
+    </script>
 </body>
 </html>
