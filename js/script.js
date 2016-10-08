@@ -7,7 +7,6 @@ var password = modalLogin.querySelector("[name=password]");
 var form = modalLogin.querySelector("form");
 var storage = localStorage.getItem("login");
 
-
 link.addEventListener("click", function (e) {
     e.preventDefault();
     modalLogin.classList.add("modal-content-show");
@@ -46,4 +45,20 @@ window.addEventListener("keydown", function (e) {
         overlay.classList.remove("modal-content-show");
         overlay.classList.remove("modal-error");
     }
+});
+
+
+var linkMap = document.querySelector(".how-to-go");
+var modalMap = document.querySelector(".modal-content-map");
+var closeMap = document.querySelector(".modal-map-close");
+
+linkMap.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalMap.classList.add("modal-content-show");
+    overlay.classList.add("overlay-content-show");
+});
+closeMap.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalMap.classList.remove("modal-content-show");
+    overlay.classList.remove("overlay-content-show");
 });
